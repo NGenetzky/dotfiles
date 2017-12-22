@@ -1,0 +1,1 @@
+../../../plugins/dak.prompt_command.bash
