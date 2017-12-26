@@ -3,6 +3,7 @@
 # global
 
 BASEDIR="$(readlink -f $(dirname $BASH_SOURCE))"
+PLUGINS=${BASEDIR}/plugins/*
 
 # functions
 
@@ -26,6 +27,17 @@ do_install() {
     link_dotfile "${HOME}/.tmux.conf" "${BASEDIR}/config/tmux/tmux.conf"
 }
 
+do_for_each_plugin(){
+    local action="${1-default}"
+
+    for f in $PLUGINS
+    do
+      echo "Processing $f file..."
+      $f
+      echo "$?=exit($f)"
+    done
+}
+
 # main
 
 main() {
@@ -33,7 +45,10 @@ main() {
 
     case $action in
         install)
-            do_install
+            do_for_each_plugin ${action}
+            ;;
+        clean)
+            do_for_each_plugin ${action}
             ;;
         0000)
             do_install
@@ -41,7 +56,7 @@ main() {
             ${BASEDIR}/tmux/tpm.bash
             ;;
         default)
-            do_install
+            do_for_each_plugin
     esac
 
 }
