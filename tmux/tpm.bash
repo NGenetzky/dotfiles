@@ -1,8 +1,10 @@
-#!/bin/bash
+#!/bin/bash -x
 
 # global
 
-BASEDIR="$(readlink -f $(dirname $BASH_SOURCE))"
+GITROOT="$(git rev-parse --show-toplevel)"
+BASEDIR="${GITROOT}/tmux/tpm.bash/"
+# BASEDIR="$(readlink -f $(dirname $BASH_SOURCE))"
 
 # functions
 

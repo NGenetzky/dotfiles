@@ -45,6 +45,7 @@ main() {
 
     case $action in
         install)
+            do_install
             do_for_each_plugin ${action}
             ;;
         clean)
