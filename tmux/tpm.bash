@@ -14,13 +14,17 @@ do_fetch() {
 do_install() {
     [[ -d ~/.tmux/plugins/tpm ]] || return 1
     ~/.tmux/plugins/tpm/bin/install_plugins
+    ln -fTs \
+        "${BASEDIR}/themes" \
+        "${HOME}/.tmux/themes"
 }
 
 do_clean() {
     [[ -d ~/.tmux/plugins/tpm ]] || return 0
     rm -r \
-        ~/.tmux/plugins/* \
-        ~/.tmux/sidebar/*
+        ~/.tmux/plugins/ \
+        ~/.tmux/sidebar/ \
+        ~/.tmux/themes/
 }
 
 # main
