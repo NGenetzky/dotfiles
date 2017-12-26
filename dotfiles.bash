@@ -30,6 +30,11 @@ main() {
         install)
             do_install
             ;;
+        0000)
+            do_install
+            ${BASEDIR}/bash/bash-it/bash-it.bash
+            ${BASEDIR}/tmux/tpm.bash
+            ;;
         default)
             do_install
     esac
