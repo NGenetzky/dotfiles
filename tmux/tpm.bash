@@ -3,7 +3,7 @@
 # global
 
 GITROOT="$(git rev-parse --show-toplevel)"
-BASEDIR="${GITROOT}/tmux/tpm.bash/"
+BASEDIR="${GITROOT}/tmux/"
 # BASEDIR="$(readlink -f $(dirname $BASH_SOURCE))"
 
 # functions
@@ -15,7 +15,7 @@ do_fetch() {
 
 do_install() {
     [[ -d ~/.tmux/plugins/tpm ]] || return 1
-    ~/.tmux/plugins/tpm/bin/install_plugins
+    #~/.tmux/plugins/tpm/bin/install_plugins
     ln -fTs \
         "${BASEDIR}/themes" \
         "${HOME}/.tmux/themes"
