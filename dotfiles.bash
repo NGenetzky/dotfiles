@@ -22,6 +22,7 @@ do_install() {
     link_dotfile "${HOME}/.bashrc" "${BASEDIR}/config/bash/bashrc"
     link_dotfile "${HOME}/.profile" "${BASEDIR}/config/bash/profile"
     link_dotfile "${HOME}/.bash_logout" "${BASEDIR}/config/bash/bash_logout"
+    link_dotfile "${HOME}/.vimrc" "${BASEDIR}/config/vim/vimrc"
 
     # ./config/tmux
     link_dotfile "${HOME}/.tmux.conf" "${BASEDIR}/config/tmux/tmux.conf"
