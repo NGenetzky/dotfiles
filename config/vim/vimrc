@@ -12,7 +12,33 @@ if has("user_commands")
   " Load 'vundles'
   source ~/.vim/vundles.vim
   " Add extra bundles here...
+
   Plugin 'vim-airline/vim-airline-themes'
+  Plugin 'kergoth/vim-bitbake'
+  "fugitive.vim: a Git wrapper so awesome, it should be illegal.
+  Plugin 'tpope/vim-fugitive'
+
+  " comment stuff out
+  Plugin 'tpope/vim-commentary'
+  " speeddating.vim: use CTRL-A/CTRL-X to increment dates, times, and more
+  Plugin 'tpope/vim-speeddating'
+  " quoting/parenthesizing made simple
+  Plugin 'tpope/vim-surround'
+  " enable repeating supported plugin maps with "."
+  Plugin 'tpope/vim-repeat'
+  " easily search for, substitute, and abbreviate multiple variants of a word
+  Plugin 'tpope/vim-abolish.git'
+  " Vim Markdown runtime files
+  Plugin 'tpope/vim-markdown'
+  Plugin 'tpope/vim-obsession'
+  Plugin 'tpope/vim-unimpaired'
+  Plugin 'tpope/vim-sensible'
+
+  " Vim syntax for TOML
+  Plugin 'cespare/vim-toml'
+
+  " A small Vim plugin with a set of helpers for Hugo https://gohugo.io
+  Plugin 'robertbasic/vim-hugo-helper'
 
 endif
 
