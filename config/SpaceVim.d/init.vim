@@ -37,6 +37,29 @@ call SpaceVim#layers#load('lang#vim')
 call SpaceVim#layers#load('lang#xml')
 call SpaceVim#layers#load('shell')   
 call SpaceVim#layers#load('tools#screensaver')
+}}}
+
+" Custom Plugins: {{{
+let g:spacevim_custom_plugins = [
+\ ['kergoth/vim-bitbake', {'on_ft' : 'bitbake'}],
+\ ['tpope/vim-commentary'],
+\ ['tpope/vim-fugitive'],
+\ ['tpope/vim-markdown', {'on_ft' : 'markdown'}],
+\ ['wsdjeg/GitHub.vim'],
+\ ]
 " }}}
 
+" Vim Before SpaceVim: {{{
+
+" Set unite work flow shortcut leader [Unite], default is `f`
+let g:spacevim_unite_leader = ',f'
+
+
+" }}}
+
+" Tweak General Settings: {{{
+
+let g:spacevim_colorscheme = 'solarized'
+
+" }}}
 
