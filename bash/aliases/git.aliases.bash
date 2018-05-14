@@ -38,7 +38,7 @@
 # alias grc='git rebase --continue'
 
 # alias gl='git log --graph --oneline --date-order --decorate=short'
-# alias gla='git log --graph --oneline --date-order --decorate=short --all'
+alias gla='git log --graph --oneline --date-order --decorate=short --all'
 # alias gld='git log --graph --oneline --date-order --decorate=short'
 # alias glad='git log --graph --oneline --date-order --decorate=short --all'
 # alias glaf='git log --graph --oneline --decorate=short --all --first-parent'
