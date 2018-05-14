@@ -34,7 +34,7 @@ do_fetch() {
 
 do_configure() {
     [[ -d ~/.dotphiles ]] || return 1
-    add_this_host "${GITROOT}/config/dotsync/dotsyncrc"
+    # add_this_host "${GITROOT}/config/dotsync/dotsyncrc"
     ln -fTs \
         "${GITROOT}/config/dotsync/dotsyncrc" \
         "${HOME}/.dotsyncrc"
