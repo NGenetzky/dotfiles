@@ -1,0 +1,3 @@
+[submodule "modules/dotphiles"]
+	path = modules/dotphiles
+	url = git@github.com:NGenetzky/dotphiles.git
