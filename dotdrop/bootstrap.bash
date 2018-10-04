@@ -4,6 +4,12 @@ SCRIPTDIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)"
 
 source "${SCRIPTDIR}/_dotdrop.bash"
 
+bootstrap_python3_venv(){
+  # Python3-venv not installed ubuntu 14.04
+  # https://askubuntu.com/questions/760177/python3-venv-not-installed-ubuntu-14-04
+  sudo apt-get install python3.4-venv
+}
+
 bootstrap(){
   local localenv="${SCRIPTDIR}/.local"
   python3 -m venv "${localenv}"

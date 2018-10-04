@@ -16,6 +16,6 @@ install_dotdrop(){
   local src="${1?}"
   (
     cd "${src}"
-    python "${src}/setup.py" install
+    python3.4 "${src}/setup.py" install
   )
 }
