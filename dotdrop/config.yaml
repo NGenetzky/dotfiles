@@ -1,0 +1,10 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+  banner: true
+  longkey: false
+  keepdot: false
+  link_by_default: false
+dotfiles:
+profiles:
