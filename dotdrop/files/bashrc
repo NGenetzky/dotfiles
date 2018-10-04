@@ -62,5 +62,18 @@ activate_bashit(){
   source "$bashitdir/bash_it.sh"
 }
 
+activate_dircolors(){
+  local dircolorfile="${1-${HOME}/.dircolors}"
+
+  if [ ! -f ${dircolorfile} ]; then
+    return 1
+  fi
+
+  eval $(dircolors -b $HOME/.dircolors)
+}
+
 activate_bashit
+activate_dircolors
+
+unset activate_bashit activate_dircolors
 

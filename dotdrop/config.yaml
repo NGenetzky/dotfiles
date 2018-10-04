@@ -21,9 +21,14 @@ dotfiles:
     dst: ~/.bashrc
     link: true
     src: bashrc
+  f_dircolors:
+    dst: ~/.dircolors
+    link: true
+    src: dircolors
 profiles:
   ngenetzky-skull:
     dotfiles:
     - f_bash_logout
     - f_bash_profile
     - f_bashrc
+    - f_dircolors
