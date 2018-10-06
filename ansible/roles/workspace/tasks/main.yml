@@ -1,6 +1,5 @@
 ---
 - name: "localenv: add bitbake"
-  # include_tasks: "{{ role_path }}/tasks/localenv-bitbake.yml"
   import_tasks: "localenv-bitbake.yml"
 - name: "dir to hold bitbake layers"
   file:
@@ -22,12 +21,12 @@
 - git:
     repo: https://github.com/NGenetzky/meta-ngenetzky
     dest: "{{ workspace_localenv }}/src/meta-ngenetzky/"
-- name: "add meta-ngenetzky to layers"
+- name: "bitbake: layers += meta-ngenetzky"
   file:
     src: "{{ workspace_localenv }}/src/meta-ngenetzky/"
     path: "{{ workspace_topdir }}/.layer/meta-ngenetzky"
     state: link
-- name: "add meta-ngenetzky to layers"
+- name: "bitbake: layers += meta-ngenetzky-base"
   file:
     src: "{{ workspace_localenv }}/src/meta-ngenetzky/meta-ngenetzky-base"
     path: "{{ workspace_topdir }}/.layer/meta-ngenetzky-base"

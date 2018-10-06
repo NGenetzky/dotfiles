@@ -3,7 +3,8 @@
   git:
     repo: https://github.com/openembedded/bitbake
     dest: "{{ workspace_localenv }}/share/bitbake/"
-- pip:
+- name: " pip install venv"
+  pip:
     requirements: "{{ workspace_localenv }}/share/bitbake/toaster-requirements.txt"
     virtualenv: "{{ workspace_localenv }}"
 # TODO: Why doesn't this work??
