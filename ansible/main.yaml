@@ -3,6 +3,12 @@
 
   roles:
     # - role: editor-vim
+    - role: workspace
+      vars:
+        workspace_rootdir: "{{ ansible_env.HOME }}/workspace/a"
+    - role: workspace
+      vars:
+        workspace_rootdir: "{{ ansible_env.HOME }}/workspace/b"
 
   tasks:
-    - import_tasks: tasks/github-ngenetzky.yaml
+    # - import_tasks: tasks/github-ngenetzky.yaml
