@@ -1,1 +1,4 @@
 .local
+
+# external roles
+roles/editor-vim

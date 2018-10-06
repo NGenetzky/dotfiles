@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  connection: local
+
+  roles:
+    #- { role: common }
+
+  tasks:
+    # - include: tasks/linkdotfiles.yaml
+    - git:
+        repo: ssh://git@github.com/NGenetzky/ansible-role-editor-vim.git
+        dest: "{{playbook_dir}}/roles/editor-vim"

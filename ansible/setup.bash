@@ -2,23 +2,32 @@
 
 SCRIPTDIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)"
 
-# source "${SCRIPTDIR}/_dotdrop.bash"
+# source "${SCRIPTDIR}/_ansible.bash"
+
+default_hosts(){
+  local dest="${1?}"
+  install -d "$(dirname ${dest})"
+cat << EOF > "${dest}"
+[local]
+localhost ansible_connection=local
+EOF
+}
 
 setup(){
   local localenv="${SCRIPTDIR}/.local"
+  local inventory="${localenv}/etc/ansible/hosts"
 
   set +u
   source "${localenv}/bin/activate"
   set -u
 
-  if [ ! -f "config.yaml" ]; then
-    install -m 664 --no-target-directory \
-      "${localenv}/share/dotdrop/config.yaml" \
-      "config.yaml"
+  if [ ! -f "${inventory}" ]; then
+    default_hosts "${inventory}"
   fi
 
-  dotdrop list
-  dotdrop listfiles
+  ansible-playbook \
+    -i "${inventory}" \
+    setup.yaml
 }
 
 if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
