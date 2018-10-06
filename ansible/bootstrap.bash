@@ -2,7 +2,7 @@
 
 SCRIPTDIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)"
 
-source "${SCRIPTDIR}/_dotdrop.bash"
+source "${SCRIPTDIR}/_ansible.bash"
 
 bootstrap(){
   local localenv="${SCRIPTDIR}/.local"
@@ -12,9 +12,9 @@ bootstrap(){
   source "${localenv}/bin/activate"
   set -u
 
-  fetch_dotdrop "${localenv}/share/dotdrop"
-  bootstrap_dotdrop "${localenv}/share/dotdrop"
-  install_dotdrop "${localenv}/share/dotdrop"
+  fetch_ansible "${localenv}/share/ansible"
+  bootstrap_ansible "${localenv}/share/ansible"
+  install_ansible "${localenv}/share/ansible"
 }
 
 if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then

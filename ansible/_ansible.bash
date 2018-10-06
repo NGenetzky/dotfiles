@@ -1,21 +1,21 @@
-fetch_dotdrop(){
+fetch_ansible(){
   local dest="${1?}"
   if [ ! -d "${dest}" ]; then
     git clone \
-      "https://github.com/deadc0de6/dotdrop.git" \
+      "https://github.com/ansible/ansible.git" \
       "${dest}"
   fi
 }
 
-bootstrap_dotdrop(){
+bootstrap_ansible(){
   local src="${1?}"
   pip3 install -r "${src}/requirements.txt"
 }
 
-install_dotdrop(){
+install_ansible(){
   local src="${1?}"
   (
     cd "${src}"
-    python "${src}/setup.py" install
+    python3 "${src}/setup.py" install
   )
 }
