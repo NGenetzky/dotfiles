@@ -1,6 +1,9 @@
 ---
 - name: "localenv: add bitbake"
   import_tasks: "localenv-bitbake.yml"
+- name: "localenv: add c9"
+  import_tasks: "localenv-c9.yml"
+
 - name: "dir to hold bitbake layers"
   file:
     path: "{{ workspace_topdir }}/.layer/"

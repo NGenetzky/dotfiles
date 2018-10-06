@@ -1,0 +1,20 @@
+---
+- name: "localenv: clone c9"
+  git:
+    repo: https://github.com/c9/core
+    dest: "{{ workspace_localenv }}/share/c9sdk/"
+- pip:
+    name: "nodeenv"
+    virtualenv: "{{ workspace_localenv }}"
+- pip:
+    name: "nodeenv"
+    virtualenv: "{{ workspace_localenv }}"
+- name: "localenv: Create nodeenv in pythonenv"
+  shell: ". {{ workspace_localenv }}/bin/activate && nodeenv -p"
+- name: "localenv: Install c9sdk"
+  shell: "export HOME='{{ workspace_rootdir }}' && . {{ workspace_localenv }}/bin/activate && bash -xe '{{ workspace_localenv }}/share/c9sdk/scripts/install-sdk.sh'"
+- name: "localenv: template server.bash"
+  template:
+    src: c9/server.bash
+    dest: "{{ workspace_localenv }}/bin/c9.server.bash"
+    mode: '755'
