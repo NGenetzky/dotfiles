@@ -1,0 +1,18 @@
+---
+- name: "localenv: clone bitbake"
+  git:
+    repo: https://github.com/openembedded/bitbake
+    dest: "{{ workspace_localenv }}/share/bitbake/"
+- pip:
+    requirements: "{{ workspace_localenv }}/share/bitbake/toaster-requirements.txt"
+    virtualenv: "{{ workspace_localenv }}"
+# TODO: Why doesn't this work??
+# - name: "localenv: add bitbake bin to PATH"
+#   file:
+#     src: "{{ workspace_localenv }}/share/bitbake/bin/bitbake"
+#     path: "{{ workspace_localenv }}/bin/bitbake"
+#     state: link
+# - name: "localenv: add bitbake bin to PYTHONPATH"
+#   copy:
+#     dest: "{{ workspace_localenv }}/lib/python2.7/site-packages/bitbake.pth"
+#     content: "{{ workspace_localenv }}/share/bitbake/lib"

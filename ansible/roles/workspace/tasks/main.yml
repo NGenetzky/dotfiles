@@ -1,0 +1,34 @@
+---
+- name: "localenv: add bitbake"
+  # include_tasks: "{{ role_path }}/tasks/localenv-bitbake.yml"
+  import_tasks: "localenv-bitbake.yml"
+- name: "dir to hold bitbake layers"
+  file:
+    path: "{{ workspace_topdir }}/.layer/"
+    state: directory
+- name: "dir to hold bitbake conf"
+  file:
+    path: "{{ workspace_topdir }}/conf/"
+    state: directory
+- name: "template bblayers.conf"
+  template:
+    src: bitbake/bblayers.conf
+    dest: "{{ workspace_topdir }}/conf/bblayers.conf"
+- name: "template console.sh"
+  template:
+    src: bitbake/console.sh
+    dest: "{{ workspace_topdir }}/console.sh"
+
+- git:
+    repo: https://github.com/NGenetzky/meta-ngenetzky
+    dest: "{{ workspace_localenv }}/src/meta-ngenetzky/"
+- name: "add meta-ngenetzky to layers"
+  file:
+    src: "{{ workspace_localenv }}/src/meta-ngenetzky/"
+    path: "{{ workspace_topdir }}/.layer/meta-ngenetzky"
+    state: link
+- name: "add meta-ngenetzky to layers"
+  file:
+    src: "{{ workspace_localenv }}/src/meta-ngenetzky/meta-ngenetzky-base"
+    path: "{{ workspace_topdir }}/.layer/meta-ngenetzky-base"
+    state: link

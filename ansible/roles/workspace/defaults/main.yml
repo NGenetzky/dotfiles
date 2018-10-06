@@ -1,0 +1,5 @@
+---
+workspace_rootdir: "{{ ansible_env.HOME }}/workspace/abc.ws"
+
+workspace_localenv: "{{ workspace_rootdir }}/.local/"
+workspace_topdir: "{{ workspace_rootdir }}/build/"
