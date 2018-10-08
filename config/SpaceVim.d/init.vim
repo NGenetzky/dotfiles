@@ -21,7 +21,7 @@ let g:spacevim_enable_debug = 1
 " SpaceVim Layers: {{{
 
 " SpaceVim Lang Layers: {{{
-call SpaceVim#layers#load('lang#c')
+" call SpaceVim#layers#load('lang#c')
 "call SpaceVim#layers#load('lang#csharp')
 "call SpaceVim#layers#load('lang#dart')
 "call SpaceVim#layers#load('lang#elixir')
@@ -106,6 +106,7 @@ call SpaceVim#layers#load('shell')
 
 " Custom Plugins: {{{
 let g:spacevim_custom_plugins = [
+\ ['gioele/vim-autoswap'],
 \ ['kergoth/vim-bitbake', {'on_ft' : 'bitbake'}],
 \ ['tpope/vim-commentary'],
 \ ['tpope/vim-fugitive'],
@@ -113,6 +114,7 @@ let g:spacevim_custom_plugins = [
 \ ['wsdjeg/GitHub.vim'],
 \ ]
 " }}}
+" ['malithsen/trello-vim'], " Needs python2
 
 " Vim Before SpaceVim: {{{
 
