@@ -1,0 +1,46 @@
+config:
+  backup: true
+  banner: true
+  create: false
+  dotpath: files
+  keepdot: false
+  link_by_default: true
+  longkey: false
+  showdiff: false
+  workdir: ~/.config/dotdrop/
+dotfiles:
+  d_bashit:
+    dst: ~/.bash_it
+    link: true
+    src: bash_it
+  d_enabled:
+    dst: ~/.bash_it/enabled
+    link: true
+    src: enabled
+
+  f_custom.aliases.bash:
+    dst: ~/.bash_it/aliases/custom.aliases.bash
+    link: true
+    src: custom.aliases.bash
+  f_custom.bash:
+    dst: ~/.bash_it/lib/custom.bash
+    link: true
+    src: custom.bash
+  f_custom.plugins.bash:
+    dst: ~/.bash_it/plugins/custom.bash
+    link: true
+    src: custom.plugins.bash
+  f_custom.completion.bash:
+    dst: ~/.bash_it/completion/custom.bash
+    link: true
+    src: custom.completion.bash
+
+profiles:
+  ngenetzky-skull:
+    dotfiles:
+    - d_bashit
+    - d_enabled
+    - f_custom.aliases.bash
+    - f_custom.completion.bash
+    - f_custom.bash
+    - f_custom.plugins.bash

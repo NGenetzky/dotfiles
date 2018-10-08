@@ -1,0 +1,34 @@
+config:
+  backup: true
+  banner: true
+  create: true
+  dotpath: files
+  keepdot: false
+  link_by_default: true
+  longkey: false
+  showdiff: false
+  workdir: ~/.config/dotdrop/
+dotfiles:
+  f_bash_logout:
+    dst: ~/.bash_logout
+    link: true
+    src: bash_logout
+  f_bash_profile:
+    dst: ~/.bash_profile
+    link: true
+    src: bash_profile
+  f_bashrc:
+    dst: ~/.bashrc
+    link: true
+    src: bashrc
+  f_dircolors:
+    dst: ~/.dircolors
+    link: true
+    src: dircolors
+profiles:
+  ngenetzky-skull:
+    dotfiles:
+    - f_bash_logout
+    - f_bash_profile
+    - f_bashrc
+    - f_dircolors
