@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SCRIPTDIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)"
-GITROOT="${SCRIPTDIR}/../"
+GITROOT="$(readlink -f ${SCRIPTDIR}/../)"
 # BASEDIR="${SCRIPTDIR}"
 
 source "${SCRIPTDIR}/_dotsync.bash"
@@ -29,8 +29,9 @@ do_setup() {
 }
 
 do_install() {
-    [[ -d ~/.dotphiles ]] || return 1
-    ~/.dotphiles/dotsync/bin/dotsync -L
+  local relpath="${GITROOT/${HOME}/}"
+  dotsync -L \
+    -d "${relpath}"
 }
 
 do_clean() {
