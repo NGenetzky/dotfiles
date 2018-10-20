@@ -2,16 +2,21 @@
 
 SCRIPTDIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)"
 BASEDIR="${SCRIPTDIR}/../../"
+
 NAME='alpine-bashit'
+UID='1000'
 
 build() {
   local name="${NAME?}"
+  local rev="$(git rev-parse HEAD)"
 
   [[ -d "${name}" ]] || return 1
 
-    docker build \
-      -t "${name}" \
-      "${name}"
+  docker build \
+    -t "${name}" \
+    --build-arg "REV=${rev}" \
+    --build-arg "UID=${UID}" \
+    "${name}"
 }
 
 console() {
@@ -20,7 +25,7 @@ console() {
   [[ -d "${name}" ]] || return 1
 
   docker run -it --rm \
-    --user 1000 \
+    --user "${UID}" \
     "${name}"
 }
 
