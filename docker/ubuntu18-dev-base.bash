@@ -4,28 +4,27 @@ SCRIPTDIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)"
 BASEDIR="${SCRIPTDIR}/../../"
 
 NAME='ubuntu18-dev-base'
-UID='1000'
+UID_DEV='1000'
 
 build() {
   local name="${NAME?}"
   local rev="$(git rev-parse HEAD)"
+  local context="${SCRIPTDIR}/${name}"
 
-  [[ -d "${name}" ]] || return 1
+  [[ -d "${context}" ]] || return 1
 
   docker build \
     -t "${name}" \
     --build-arg "REV=${rev}" \
-    --build-arg "UID=${UID}" \
-    "${name}"
+    --build-arg "UID_DEV=${UID_DEV}" \
+    "${context}"
 }
 
 console() {
   local name="${NAME?}"
 
-  [[ -d "${name}" ]] || return 1
-
   docker run -it --rm \
-    --user "${UID}" \
+    --user "${UID_DEV}" \
     "${name}"
 }
 

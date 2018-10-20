@@ -2,9 +2,6 @@ FROM ubuntu:18.04
 LABEL \
     maintainer="Nathan@Genetzky.us"
 
-# References:
-# https://github.com/NGenetzky/dev-shell/tree/ab85b632c8ef554dd49a85e7db067bcc2a7eca2b/dev-base
-
 RUN apt-get update && apt-get install -y \
     build-essential \
     ca-certificates \
@@ -25,5 +22,17 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean && rm -rf /var/lib/apt/lists/* \
     && locale-gen --purge en_US.UTF-8 \
     && update-locale LANG=en_US.UTF-8
+
+ARG UID_DEV=1000
+ARG REV=master
+
+RUN useradd --shell /bin/bash --create-home \
+    --uid "${UID_DEV}" dev
+USER dev
+
+RUN git clone "https://github.com/NGenetzky/dotfiles" "${HOME}/.dotfiles" \
+    && cd "${HOME}/.dotfiles" \
+    && git checkout "${REV}" \
+    && "${HOME}/.dotfiles/dotfiles.bash" 'install'
 
 ENTRYPOINT ["/bin/bash"]
