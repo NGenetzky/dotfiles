@@ -1,0 +1,26 @@
+---
+- name: Download public ssh keys
+  get_url:
+    url: https://github.com/NGenetzky.keys
+    dest: ~/git/ngenetzky/.github.ngenetzky.keys
+    checksum: md5:09f81217525db55952fc6ea8196441ca
+- name: Clone or update all repositories
+  git:
+    repo: ssh://git@github.com/NGenetzky/{{ item }}.git
+    dest: "~/git/ngenetzky/{{ item }}"
+  with_items:
+    # - documents
+    # - dotvim
+    - ansible-role-editor-vim
+    - dev-shell
+    - docker-data-crow
+    - dotfiles
+    - dotfiles-holman
+    - dotphiles
+    - git-annex-adapter
+    - hugo-academic-kickstart
+    - hugo-resume
+    - jatdb
+    - meta-genet
+    - meta-ngenetzky
+    - particle-projects

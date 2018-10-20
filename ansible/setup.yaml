@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  connection: local
+  roles:
+  tasks:
+    - git:
+        repo: ssh://git@github.com/NGenetzky/ansible-role-editor-vim.git
+        dest: "{{playbook_dir}}/roles/editor-vim"
