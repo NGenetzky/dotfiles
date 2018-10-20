@@ -1,4 +1,4 @@
-FROM alpine:latest as builder
+FROM alpine:3.7 as builder
 
 # References:
 # https://github.com/JAremko/alpine-vim/blob/4af4a960da56344e52f38b8ea9feae0f374fd557/alpine-vim-base/Dockerfile
@@ -30,7 +30,7 @@ RUN git clone https://github.com/vim/vim \
     --with-python-config-dir=/usr/lib/python2.7/config \
  && make install
 
-FROM alpine:latest
+FROM alpine:3.7
 
 COPY --from=builder /usr/local/bin/ /usr/local/bin
 COPY --from=builder /usr/local/share/vim/ /usr/local/share/vim/
