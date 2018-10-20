@@ -17,12 +17,9 @@ do_install() {
     [[ -d ~/.bash_it ]] || return 1
     ~/.bash_it/install.sh --silent --no-modify-config
 
-    for file_type in "aliases" "plugins" "completion"
-    do
-        ln -fTs \
-            "${BASEDIR}/custom/${file_type}" \
-            "${HOME}/.bash_it/custom/${file_type}"
-    done
+    ln -fTs \
+        "${BASEDIR}/custom" \
+        "${HOME}/.bash_it/custom/custom"
 }
 
 do_clean() {
