@@ -25,9 +25,6 @@ do_setup() {
     "${GITROOT}/config/dotsync/dotsyncrc" \
     "${rcfile}"
 
-  grep "^$(hostname)" ${rcfile} \
-    || add_this_host "${rcfile}"
-
   dotsync -l
 }
 
