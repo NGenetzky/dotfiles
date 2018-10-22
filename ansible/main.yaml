@@ -2,7 +2,7 @@
 - hosts: dev
 
   roles:
-    # - role: editor-vim
+    - role: editor-vim
 
   tasks:
     - import_tasks: tasks/github-ngenetzky.yaml
