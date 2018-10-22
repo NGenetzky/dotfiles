@@ -13,6 +13,7 @@ do_bootstrap() {
 
   dotsync_fetch "${srcdir}"
 
+  install -d "${bindir}"
   ln -fTs \
       "${srcdir}/bin/dotsync" \
       "${HOME}/bin/dotsync"
@@ -40,7 +41,7 @@ do_clean() {
 
   rm -r --interactive=never "${datadir}/dotsync" || true
   rm "${bindir}/dotsync" || true
-  rm "${HOME}.dotsyncrc" || true
+  rm "${HOME}/.dotsyncrc" || true
 }
 
 # main
