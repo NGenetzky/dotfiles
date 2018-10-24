@@ -35,7 +35,7 @@
 # alias gsm='git submodule'
 # alias gsubup='git submodule update --init'
 
-# alias grc='git rebase --continue'
+alias grc='git rebase --continue'
 
 # alias gl='git log --graph --oneline --date-order --decorate=short'
 alias gla='git log --graph --oneline --date-order --decorate=short --all'
