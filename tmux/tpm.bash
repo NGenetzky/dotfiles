@@ -3,7 +3,7 @@
 # global
 
 GITROOT="$(git rev-parse --show-toplevel)"
-BASEDIR="${GITROOT}/tmux/tpm.bash/"
+BASEDIR="${GITROOT}/tmux/"
 # BASEDIR="$(readlink -f $(dirname $BASH_SOURCE))"
 
 # functions
