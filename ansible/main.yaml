@@ -6,3 +6,4 @@
 
   tasks:
     - import_tasks: tasks/github-ngenetzky.yaml
+    - import_tasks: tasks/bin-git-open.yaml
