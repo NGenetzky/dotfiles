@@ -4,6 +4,7 @@ SCRIPTDIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)"
 BASEDIR="${SCRIPTDIR}/../../"
 
 NAME='ubuntu18-dev-base'
+NAME='ubuntu18-dev-c9'
 UID_DEV='1000'
 
 build() {
@@ -20,11 +21,14 @@ build() {
     "${context}"
 }
 
-console() {
+server() {
   local name="${NAME?}"
 
-  docker run -it --rm \
+  docker run -d --rm \
+    -p "8181:8181" \
+    -p "3000:3000" \
     --user "${UID_DEV}" \
+    --name "${name}" \
     "${name}"
 }
 
@@ -35,12 +39,12 @@ main() {
     build)
       build
       ;;
-    console)
-      console
+    server)
+      server
       ;;
     default)
       build
-      console
+      server
   esac
 
 }
