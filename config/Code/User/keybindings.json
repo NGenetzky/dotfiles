@@ -1,3 +1,36 @@
 // Place your key bindings in this file to overwrite the defaults
 [
+    ////////////////////////////////////////////////////////////////////////////
+    // ngenetzky.tmux
+    //
+    {
+        "key": "ctrl+a",
+        "command": "multiCommand.terminal_tmux_prefix",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "multiCommand.terminal_tmux_prefix",
+        "when": "explorerViewletFocus"
+    }
+    // ngenetzky.tmux
+    //
+    ////////////////////////////////////////////////////////////////////////////
+
+    ////////////////////////////////////////////////////////////////////////////
+    // ngenetzky.vim
+    //
+    {
+        "key": "ctrl+k v",
+        "command": "extension.openCurrentFileInVimTer",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+k v",
+        "command": "extension.openSelectedFileInVimTer",
+        "when": "explorerViewletFocus"
+    }
+    // ngenetzky.tmux
+    //
+    ////////////////////////////////////////////////////////////////////////////
 ]
