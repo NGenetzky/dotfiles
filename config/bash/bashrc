@@ -72,8 +72,12 @@ activate_dircolors(){
   eval $(dircolors -b $HOME/.dircolors)
 }
 
+activate_fzf(){
+  [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+}
+
 activate_bashit
 activate_dircolors
+activate_fzf
 
-unset activate_bashit activate_dircolors
-
+unset activate_bashit activate_dircolors activate_fzf
