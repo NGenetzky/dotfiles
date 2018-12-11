@@ -2,7 +2,25 @@
     "editor.minimap.enabled": false,
     "files.insertFinalNewline": true,
     "window.zoomLevel": -2,
-    "workbench.colorTheme": "Braver's Solarized Dark (themed workbench)",
+    // "workbench.colorTheme": "Braver's Solarized Dark (themed workbench)",
+    // "workbench.colorTheme": "Solarized Dark",
+    ////////////////////////////////////////////////////////////////////////////
+    // jira-plugin
+    //
+    "jira-plugin.workingProject": "VNG",
+    "jira-plugin.baseUrl": "https://vaddio.atlassian.net",
+    "jira-plugin.username": "ngenetzky",
+    // jira-plugin
+    //
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    // gitlens
+    //
+    "gitlens.defaultDateStyle": "absolute",
+    "gitlens.defaultDateFormat": "YYYY-MM-DDTHH:mm:ss.SSS",
+    //
+    // gitlens
+    ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
     // matthias-schwarze.vimter
     //
