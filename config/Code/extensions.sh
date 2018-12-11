@@ -5,9 +5,11 @@ code --install-extension chrislajoie.vscode-modelines
 code --install-extension EugenWiens.bitbake
 code --install-extension keroc.hex-fmt
 code --install-extension marus25.cortex-debug
+code --install-extension matthias-schwarze.vimter
 code --install-extension ms-python.python
 code --install-extension ms-vscode.cpptools
 code --install-extension PeterJausovec.vscode-docker
+code --install-extension ryuta46.multi-command
 code --install-extension vscodevim.vim
 code --install-extension ZixuanWang.linkerscript
 
