@@ -1,0 +1,80 @@
+{
+    "editor.minimap.enabled": false,
+    "files.insertFinalNewline": true,
+    "window.zoomLevel": -2,
+    "workbench.colorTheme": "Braver's Solarized Dark (themed workbench)",
+    ////////////////////////////////////////////////////////////////////////////
+    // matthias-schwarze.vimter
+    //
+    // Specifies the path to the terminal version of VIM.
+    "VimTer.vimPath": "/usr/bin/vim",
+    // matthias-schwarze.vimter
+    //
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    // ryuta46.multi-command
+    //
+    "multiCommand.commands": [
+        {
+            "command": "multiCommand.terminal_tmux_prefix",
+            "sequence": [
+                "workbench.action.terminal.focus",
+                {
+                    // This assumes you have tmux running in the integrated
+                    // terminal and your prefix is <C-a>.
+                    "command": "workbench.action.terminal.sendSequence",
+                    "args": {
+                        // http://ascii-table.com/ansi-escape-sequences.php
+                        "text": "\u0001" // <C-a>
+                        // "text": "\u0002" // <C-b>
+                    }
+                }
+            ]
+        },
+    ],
+    //
+    // ryuta46.multi-command
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    // vscodevim.vim
+    //
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    // "vim.insertModeKeyBindings": [
+    //     {
+    //         "before": [
+    //             "j",
+    //             "j"
+    //         ],
+    //         "after": [
+    //             "<Esc>"
+    //         ]
+    //     }
+    // ],
+    // "vim.normalModeKeyBindingsNonRecursive": [
+    //     {
+    //         "before": [
+    //             "<leader>",
+    //             "d"
+    //         ],
+    //         "after": [
+    //             "d",
+    //             "d"
+    //         ]
+    //     },
+    // ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-k>": false,
+        // "<C-r>": false, // I like redo.
+    },
+    //
+    // vscodevim.vim
+    ////////////////////////////////////////////////////////////////////////////
+}
