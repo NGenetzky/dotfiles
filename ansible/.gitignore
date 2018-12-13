@@ -2,3 +2,6 @@
 
 # external roles
 roles/editor-vim
+
+# Ansible
+*.retry

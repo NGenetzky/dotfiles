@@ -1,0 +1,15 @@
+---
+- name: Has datadir Directory
+  file:
+    path: "~/.local/share/"
+    state: directory
+    recurse: yes
+- name: Clone git-open
+  git:
+    repo: https://github.com/paulirish/git-open.git
+    dest: "~/.local/share/git-open/"
+- name: Add to user specific path
+  file:
+    path: "~/bin/git-open"
+    src: "~/.local/share/git-open/git-open"
+    state: link

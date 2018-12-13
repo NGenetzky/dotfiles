@@ -8,6 +8,10 @@
         "key": "ctrl+k d",
         "command": "workbench.action.files.revealActiveFileInWindows",
     },
+    {
+        "key": "ctrl+\\", // Used for kermit
+        "command": "-",
+    },
     ////////////////////////////////////////////////////////////////////////////
     // ngenetzky.tmux
     //
@@ -41,7 +45,7 @@
         "command": "extension.openSelectedFileInVimTer",
         "when": "explorerViewletFocus"
     },
-    // ngenetzky.tmux
+    // ngenetzky.vim
     //
     ////////////////////////////////////////////////////////////////////////////
 ]
