@@ -1,6 +1,7 @@
 {
     "editor.minimap.enabled": false,
     "files.insertFinalNewline": true,
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe",
     "window.zoomLevel": -2,
     // "workbench.colorTheme": "Braver's Solarized Dark (themed workbench)",
     // "workbench.colorTheme": "Solarized Dark",
