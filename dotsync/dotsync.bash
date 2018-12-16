@@ -13,6 +13,7 @@ do_bootstrap() {
 
   dotsync_fetch "${srcdir}"
 
+  mkdir -p "${HOME}/bin/"
   ln -fTs \
       "${srcdir}/bin/dotsync" \
       "${HOME}/bin/dotsync"
