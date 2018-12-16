@@ -14,6 +14,8 @@ config/Code/User/keybindings.json:.config/Code/User/keybindings.json
 config/Code/User/settings.json:.config/Code/User/settings.json
 config/Code/User/snippets:.config/Code/User/snippets
 config/tmux/tmux.conf:.tmux.conf
+config/git/gitconfig:.gitconfig
+config/git/gitignore:.gitignore
 [endfiles]
 
 # Hosts to sync
