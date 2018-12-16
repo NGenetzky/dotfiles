@@ -1,26 +1,17 @@
-#
-# dotphiles : https://github.com/dotphiles/dotphiles
-#
-# Git configuration.
-#
-# Authors:
-#   Ben O'Hara <bohara@gmail.com>
-#
-
 # Global Config
 [user]
-    #name = "**Your Name**"
-    #email = "**Your Email**"
-    #signingkey = **Your GPG ID**
+    name = "Nathan Genetzky"
+    email = "Nathan@Genetzky.us"
+    # signingkey = **Your GPG ID**
 
 [branch "master"]
     remote = origin
     merge = refs/heads/master
 
 [color]
-    branch = always
-    diff = always
-    grep = always
+    # branch = always
+    # diff = always
+    # grep = always
     interactive = always
     pager = true
     showbranch = auto
