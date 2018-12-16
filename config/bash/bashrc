@@ -76,8 +76,14 @@ activate_fzf(){
   [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 }
 
+configure_preferences(){
+    export VISUAL="vim"
+    export EDITOR="$VISUAL"
+}
+
 activate_bashit
 activate_dircolors
 activate_fzf
+configure_preferences
 
-unset activate_bashit activate_dircolors activate_fzf
+unset activate_bashit activate_dircolors activate_fzf configure_preferences
