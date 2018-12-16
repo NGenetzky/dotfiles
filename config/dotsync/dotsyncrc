@@ -25,5 +25,6 @@ lnx-nateg git=ANY
 ngenetzky-beast git=ANY
 ngenetzky-skull git=ANY
 ngenetzky-ultra git=ANY
+Skull git=ANY
 [endhosts]
 
