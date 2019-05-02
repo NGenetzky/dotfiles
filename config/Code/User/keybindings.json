@@ -9,8 +9,12 @@
         "command": "workbench.action.files.revealActiveFileInWindows",
     },
     {
-        "key": "ctrl+\\", // Used for kermit
-        "command": "-",
+        "key": "ctrl+\\",
+        "command": "-"
+    },
+    {
+        "key": "ctrl+k ctrl+\\",
+        "command": "-"
     },
     ////////////////////////////////////////////////////////////////////////////
     // ngenetzky.tmux

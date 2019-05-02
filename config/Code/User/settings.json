@@ -1,13 +1,14 @@
 {
     "editor.minimap.enabled": false,
     "files.insertFinalNewline": true,
-    "window.zoomLevel": -2,
+    "window.zoomLevel": 1,
     // "workbench.colorTheme": "Braver's Solarized Dark (themed workbench)",
     // "workbench.colorTheme": "Solarized Dark",
+
     ////////////////////////////////////////////////////////////////////////////
     // jira-plugin
     //
-    "jira-plugin.workingProject": "VNG",
+    "jira-plugin.workingProject": "",
     "jira-plugin.baseUrl": "https://vaddio.atlassian.net",
     "jira-plugin.username": "ngenetzky",
     // jira-plugin
@@ -56,9 +57,9 @@
     ////////////////////////////////////////////////////////////////////////////
     // vscodevim.vim
     //
-    "vim.easymotion": true,
-    "vim.sneak": true,
-    "vim.incsearch": true,
+    // "vim.easymotion": true,
+    // "vim.sneak": true,
+    // "vim.incsearch": true,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
@@ -95,4 +96,14 @@
     //
     // vscodevim.vim
     ////////////////////////////////////////////////////////////////////////////
+    "editor.renderWhitespace": "all",
+    "files.watcherExclude": {
+        "**/.gcc-arm-none-eabi/**": true,
+        "**/.nRF5_SDK/**": true
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "gitTreeCompare.diffMode": "full",
+    "[c]": {
+      "editor.defaultFormatter": "xaver.clang-format"
+    },
 }
