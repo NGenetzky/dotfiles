@@ -1,21 +1,30 @@
 #!/bin/bash
 
-SCRIPTDIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)"
-GITROOT="$(readlink -f ${SCRIPTDIR}/../)"
-# BASEDIR="${SCRIPTDIR}"
+GITROOT="$(git rev-parse --show-toplevel)"
+# SCRIPTDIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)"
+SCRIPTDIR="${GITROOT}/dotsync/"
+BINDIR="${HOME}/.local/bin/"
+DOTSYNC="${HOME}/.local/bin/dotsync"
 
-source "${SCRIPTDIR}/_dotsync.bash"
+dotsync_fetch(){
+  local dest="${1?}"
+  if [ ! -d "${dest}" ]; then
+    git clone --depth=1 \
+        'https://github.com/dotphiles/dotsync.git' \
+        "${dest}"
+  fi
+}
 
 do_bootstrap() {
   local datadir="${HOME}/.local/share/"
-  local bindir="${HOME}/.local/bin/"
   local srcdir="${datadir}/dotsync"
 
+  install -d "${BINDIR}"
   dotsync_fetch "${srcdir}"
 
   ln -fTs \
       "${srcdir}/bin/dotsync" \
-      "${HOME}/bin/dotsync"
+      "${BINDIR}/dotsync"
 }
 
 do_setup() {
@@ -25,12 +34,13 @@ do_setup() {
     "${GITROOT}/config/dotsync/dotsyncrc" \
     "${rcfile}"
 
-  dotsync -l
+  "${DOTSYNC}" -l
 }
 
 do_install() {
   local relpath="${GITROOT/${HOME}/}"
-  dotsync -L \
+
+  "${DOTSYNC}" -L \
     -d "${relpath}"
 }
 
