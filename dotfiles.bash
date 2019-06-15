@@ -3,7 +3,7 @@
 # global
 
 BASEDIR="$(readlink -f $(dirname $BASH_SOURCE))"
-PLUGINS=${BASEDIR}/plugins/*
+PLUGINS=${BASEDIR}/plugins/*.bash
 
 # functions
 
@@ -44,17 +44,14 @@ main() {
     local action="${1-default}"
 
     case $action in
-        install)
+        simple)
             do_install
+            ;;
+        install)
             do_for_each_plugin ${action}
             ;;
         clean)
             do_for_each_plugin ${action}
-            ;;
-        0000)
-            do_install
-            ${BASEDIR}/bash/bash-it/bash-it.bash
-            ${BASEDIR}/tmux/tpm.bash
             ;;
         default)
             do_for_each_plugin
