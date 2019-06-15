@@ -6,26 +6,30 @@ GITROOT="$(git rev-parse --show-toplevel)"
 BASEDIR="${GITROOT}/bash/bash-it/"
 # BASEDIR="$(readlink -f $(dirname $BASH_SOURCE))"
 
+SRCDIR="${HOME}/.bash_it/"
+
 # functions
 
 do_fetch() {
-    [[ -d ~/.bash_it ]] && return 0
-    git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
+    [[ -d "${SRCDIR}" ]] && return 0
+    git clone --depth=1 https://github.com/Bash-it/bash-it.git "${SRCDIR}"
 }
 
 do_install() {
-    [[ -d ~/.bash_it ]] || return 1
-    ~/.bash_it/install.sh --silent --no-modify-config
+    [[ -d "${SRCDIR}" ]] || return 1
+    "${SRCDIR}/install.sh" --silent --no-modify-config
 
     ln -fTs \
         "${BASEDIR}/custom" \
-        "${HOME}/.bash_it/custom/custom"
+        "${SRCDIR}/custom/custom"
+
+    bash -l "${GITROOT}/config/bashit/bashit-config.sh"
 }
 
 do_clean() {
-    [[ -d ~/.bash_it ]] || return 0
-    ~/.bash_it/uninstall.sh
-    rm -r ~/.bash_it/
+    [[ -d "${SRCDIR?}" ]] || return 0
+    "${SRCDIR?}/uninstall.sh"
+    rm -r "${SRCDIR?}"
 }
 
 # main
@@ -39,6 +43,9 @@ main() {
             ;;
         install)
             do_install
+            ;;
+        clean)
+            do_clean
             ;;
         default)
             do_fetch
