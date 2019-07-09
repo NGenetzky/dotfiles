@@ -7,6 +7,5 @@ source "${SCRIPTDIR}/_downloads.bash"
 set -eu -o pipefail
 
 wget_download  \
-	'https://releases.hashicorp.com/vagrant/2.2.2/vagrant_2.2.2_linux_amd64.zip' \
-	'vagrant_2.2.2_linux_amd64.zip'
-
+	'https://downloads.arduino.cc/arduino-1.8.9-linux64.tar.xz' \
+	'arduino-1.8.9-linux64.tar.xz'
