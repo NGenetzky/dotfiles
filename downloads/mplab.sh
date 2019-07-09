@@ -7,6 +7,7 @@ source "${SCRIPTDIR}/_downloads.bash"
 set -eu -o pipefail
 
 wget_download  \
-	'https://releases.hashicorp.com/vagrant/2.2.2/vagrant_2.2.2_linux_amd64.zip' \
-	'vagrant_2.2.2_linux_amd64.zip'
+	'ww1.microchip.com/downloads/en/DeviceDoc/MPLABX-v5.10-linux-installer.tar' \
+	'MPLABX-v5.10-linux-installer.tar'
+
 

@@ -7,6 +7,6 @@ source "${SCRIPTDIR}/_downloads.bash"
 set -eu -o pipefail
 
 wget_download  \
-	'https://releases.hashicorp.com/vagrant/2.2.2/vagrant_2.2.2_linux_amd64.zip' \
-	'vagrant_2.2.2_linux_amd64.zip'
+	'https://download.teamviewer.com/download/linux/teamviewer_amd64.deb' \
+	'teamviewer_amd64.deb'
 
