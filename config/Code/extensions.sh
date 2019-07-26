@@ -22,12 +22,15 @@ code --install-extension marus25.cortex-debug
 code --install-extension matthias-schwarze.vimter
 code --install-extension ms-python.python
 code --install-extension ms-vscode.cpptools
+code --install-extension ms-vsliveshare.vsliveshare
 code --install-extension plorefice.devicetree
 code --install-extension qezhu.gitlink
 code --install-extension ryuta46.multi-command
 code --install-extension vscodevim.vim
+code --install-extension xaver.clang-format
 code --install-extension yzhang.markdown-all-in-one
 code --install-extension ziyasal.vscode-open-in-github
+
 
 # Disabled, install on workspace-by-workspace basis.
 # code --install-extension GitHub.vscode-pull-request-github
