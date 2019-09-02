@@ -11,6 +11,7 @@ config/bash/bash_logout:.bash_logout
 config/bash/bashrc:.bashrc
 config/bash/profile:.bash_profile
 config/bash/profile:.profile
+config/dircolors/dircolors.ansi-dark:.dircolors
 config/git/gitconfig:.gitconfig
 config/Code/User/keybindings.json:.config/Code/User/keybindings.json
 config/Code/User/settings.json:.config/Code/User/settings.json
