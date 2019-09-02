@@ -1,13 +1,13 @@
 {
     "editor.minimap.enabled": false,
     "files.insertFinalNewline": true,
-    "window.zoomLevel": 2,
+    "window.zoomLevel": -1,
     // "workbench.colorTheme": "Braver's Solarized Dark (themed workbench)",
     // "workbench.colorTheme": "Solarized Dark",
     ////////////////////////////////////////////////////////////////////////////
     // jira-plugin
     //
-    "jira-plugin.workingProject": "VNG",
+    "jira-plugin.workingProject": "",
     "jira-plugin.baseUrl": "https://vaddio.atlassian.net",
     "jira-plugin.username": "ngenetzky",
     // jira-plugin
@@ -92,6 +92,13 @@
         "<C-k>": false,
         // "<C-r>": false, // I like redo.
     },
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "editor.renderWhitespace": "all",
     //
     // vscodevim.vim
     ////////////////////////////////////////////////////////////////////////////
