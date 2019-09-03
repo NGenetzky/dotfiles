@@ -24,6 +24,7 @@ config/tmux/plugins.tmux.conf:.tmux/plugins.tmux.conf
 ## hostname                     type=masterhost, ANY or NONE    files=dotfile:tolink,another:tolink
 [hosts]
 lnx-nateg git=ANY
+lnx-nateg2 git=ANY
 ngenetzky-beast git=ANY
 ngenetzky-skull git=ANY
 ngenetzky-ultra git=ANY
