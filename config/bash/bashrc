@@ -76,8 +76,34 @@ activate_fzf(){
   [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 }
 
+activate_nvm(){
+    local nvm_d
+    nvm_d="$HOME/.nvm"
+    [ -d "${nvm_d}" ] || return 0
+
+    export NVM_DIR="${nvm_d}"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+}
+
+
+activate_virtualenvwrapper(){
+    local virtualenvwrapper_f
+    virtualenvwrapper_f="${HOME}/.local/bin/virtualenvwrapper.sh"
+    [ -f "${virtualenvwrapper_f}" ] || return 0
+
+    export WORKON_HOME="${HOME}/.virtualenvs"
+    export PROJECT_HOME="${HOME}/work"
+    export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3"
+    export VIRTUALENVWRAPPER_VIRTUALENV="${HOME}/.local/bin/virtualenv"
+    source "${virtualenvwrapper_f}"
+}
+
 activate_bashit
 activate_dircolors
 activate_fzf
+activate_nvm
+activate_virtualenvwrapper
 
-unset activate_bashit activate_dircolors activate_fzf
+unset activate_bashit activate_dircolors activate_fzf activate_nvm activate_virtualenvwrapper
+
