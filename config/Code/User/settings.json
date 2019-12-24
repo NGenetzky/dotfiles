@@ -1,9 +1,17 @@
 {
     "editor.minimap.enabled": false,
     "files.insertFinalNewline": true,
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 0,
     // "workbench.colorTheme": "Braver's Solarized Dark (themed workbench)",
     // "workbench.colorTheme": "Solarized Dark",
+
+    // terminal.integrated.fontFamily
+    // terminal.integrated.fontSize
+    // terminal.integrated.fontWeight
+    // terminal.integrated.fontWeightBold
+    // terminal.integrated.lineHeight
+
+
     ////////////////////////////////////////////////////////////////////////////
     // jira-plugin
     //
@@ -99,6 +107,19 @@
         "editor.defaultFormatter": "xaver.clang-format"
     },
     "editor.renderWhitespace": "all",
+    "[yaml]": {
+        "editor.tabSize": 2,
+    },
+    "catch2TestExplorer.userId": "014f7ab1544eeae0a9c4c928f8d37e6dbc752b61",
+    "catch2TestExplorer.logSentry": "disable_1",
+    "terminal.integrated.fontSize": 15,
+    "plantuml.diagramsRoot": "docs/diagrams/",
+    "plantuml.exportFormat": "svg",
+    "plantuml.exportOutDir": "docs/diagrams/",
+    "editor.minimap.scale": 1.5,
+    "cSpell.userWords": [
+        "cedux"
+    ],
     //
     // vscodevim.vim
     ////////////////////////////////////////////////////////////////////////////
