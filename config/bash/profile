@@ -28,3 +28,4 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 which vim > '/dev/null' && export EDITOR="vim"
+export XILINXD_LICENSE_FILE='27010@licensemt01'
