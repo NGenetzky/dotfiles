@@ -99,6 +99,20 @@ activate_virtualenvwrapper(){
     source "${virtualenvwrapper_f}"
 }
 
+if [ -d "${HOME}/.task/" ] ; then
+    # alias task="${HOME}/.task/bin/task-datalad.sh"
+
+    alias t="/usr/bin/task"
+    alias t_in="task add +in"
+    alias t_next="task next"
+
+    t_tickle() {
+        deadline=$1
+        shift
+        task add +tickle "wait:$deadline" $@
+    }
+fi
+
 activate_bashit
 activate_dircolors
 activate_fzf
