@@ -1,5 +1,4 @@
 {
-    "editor.minimap.enabled": false,
     "files.insertFinalNewline": true,
     "window.zoomLevel": -1,
     // "workbench.colorTheme": "Braver's Solarized Dark (themed workbench)",
@@ -99,6 +98,36 @@
         "editor.defaultFormatter": "xaver.clang-format"
     },
     "editor.renderWhitespace": "all",
+    "yaml.schemas": {
+        "file:///home/nateg/.vscode/extensions/atlassian.atlascode-2.3.2/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "projectManager.projectsLocation": "~/.config/vscode_projects.json",
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.lineHeight": 1.2,
+    "atlascode.jira.jqlList": [
+        {
+            "id": "c9589d67-a01e-47a8-afb8-2bd76850679a",
+            "enabled": true,
+            "name": "My vaddio Issues",
+            "query": "assignee = currentUser() ORDER BY lastViewed DESC ",
+            "siteId": "6c23a7dd-e70f-4d94-b89e-36aafbf3ba3d",
+            "monitor": true
+        }
+    ],
+    "gitTreeCompare.diffMode": "full",
+    "files.watcherExclude": {
+        "**/.git": true,
+        "**/build/downloads/**": true,
+        "**/build/sstate-cache/**": true,
+        "**/build/tmp/**": true
+    },
+    "task.autoDetect": "off",
+    "files.exclude": {
+        "**/build/downloads": true,
+        "**/build/sstate-cache": true,
+        "**/build/tmp": true
+    },
+    "window.restoreWindows": "none",
     //
     // vscodevim.vim
     ////////////////////////////////////////////////////////////////////////////
