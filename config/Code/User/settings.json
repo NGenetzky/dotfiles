@@ -1,7 +1,7 @@
 {
     "editor.minimap.enabled": false,
     "files.insertFinalNewline": true,
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     // "workbench.colorTheme": "Braver's Solarized Dark (themed workbench)",
     // "workbench.colorTheme": "Solarized Dark",
 
@@ -104,6 +104,9 @@
     "workbench.iconTheme": "material-icon-theme",
     "gitTreeCompare.diffMode": "full",
     "[c]": {
+      "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "[cpp]": {
       "editor.defaultFormatter": "xaver.clang-format"
     },
 }
