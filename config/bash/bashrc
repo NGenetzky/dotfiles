@@ -76,8 +76,18 @@ activate_fzf(){
   [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 }
 
+path_add_local(){
+    # set PATH so it includes user's private bin directories
+    # PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+    pathmunge "$HOME/bin"
+    pathmunge "$HOME/.local/bin"
+}
+
 activate_bashit
 activate_dircolors
 activate_fzf
+path_add_local
 
-unset activate_bashit activate_dircolors activate_fzf
+unset activate_bashit activate_dircolors activate_fzf \
+    path_add_local
+
