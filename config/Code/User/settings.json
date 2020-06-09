@@ -4,10 +4,13 @@
     "window.zoomLevel": -2,
     // "workbench.colorTheme": "Braver's Solarized Dark (themed workbench)",
     // "workbench.colorTheme": "Solarized Dark",
+
+    // Controls whether opened editors show as preview. Preview editors are reused until they are pinned (e.g. via double click or editing) and show up with an italic font style.
+    "workbench.editor.enablePreview": false,
     ////////////////////////////////////////////////////////////////////////////
     // jira-plugin
     //
-    "jira-plugin.workingProject": "VNG",
+    "jira-plugin.workingProject": "",
     "jira-plugin.baseUrl": "https://vaddio.atlassian.net",
     "jira-plugin.username": "ngenetzky",
     // jira-plugin
@@ -16,8 +19,9 @@
     ////////////////////////////////////////////////////////////////////////////
     // gitlens
     //
-    "gitlens.defaultDateStyle": "absolute",
     "gitlens.defaultDateFormat": "YYYY-MM-DDTHH:mm:ss.SSS",
+    "gitlens.defaultDateStyle": "absolute",
+    "gitlens.hovers.currentLine.over": "line",
     //
     // gitlens
     ////////////////////////////////////////////////////////////////////////////
@@ -52,6 +56,19 @@
     ],
     //
     // ryuta46.multi-command
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    // fabiospampinato.vscode-terminals
+    //
+    // "terminals.invertCommandsAndDescription": false, // Invert a terminal commands and description in the quickpick
+    "terminals.showCommands": false, // Show terminals' commands in the quickpick
+    // "terminals.showDescriptions": true, // Show terminals' descriptions in the quickpick
+    // "terminals.sortTerminals": false, // Sort terminals alphabetically
+    "terminals.env": { // Global environment variables that will be applied to all terminals
+    },
+    "terminals.multiplexer": "temux", // The terminal multiplexer to use for persistent terminals, supported values are: "screen", "tmux"
+    //
+    // fabiospampinato.vscode-terminals
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
     // vscodevim.vim
@@ -92,7 +109,33 @@
         "<C-k>": false,
         // "<C-r>": false, // I like redo.
     },
+    "files.associations": {
+        "info": "log",
+        "messages": "log",
+        "*.cfg": "ini"
+    },
+    "vim.disableExtension": false,
     //
     // vscodevim.vim
     ////////////////////////////////////////////////////////////////////////////
+    "shellformat.path": "/home/nateg/.local/bin/shfmt",
+    "editor.renderWhitespace": "all",
+    "atlascode.showWelcomeOnInstall": false,
+    "atlascode.jira.workingSite": {
+        "baseUrlSuffix": "atlassian.net"
+    },
+    "yaml.schemas": {
+        "file:///home/nateg/.vscode/extensions/atlassian.atlascode-1.4.3/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "printcode.fontSize": 8,
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format-3.9",
+    "C_Cpp.default.intelliSenseMode": "gcc-x64",
+    "C_Cpp.loggingLevel": "Warning",
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "gitTreeCompare.diffMode": "full"
 }
