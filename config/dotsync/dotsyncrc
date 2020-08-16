@@ -26,6 +26,7 @@ config/tmux/plugins.tmux.conf:.tmux/plugins.tmux.conf
 lnx-nateg git=ANY
 ngenetzky-beast git=ANY
 ngenetzky-skull git=ANY
+ngenetzky-yoga git=ANY
 ngenetzky-ultra git=ANY
 [endhosts]
 

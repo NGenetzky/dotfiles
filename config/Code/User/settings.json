@@ -99,6 +99,7 @@
         "editor.defaultFormatter": "xaver.clang-format"
     },
     "editor.renderWhitespace": "all",
+    "workbench.iconTheme": "material-icon-theme",
     //
     // vscodevim.vim
     ////////////////////////////////////////////////////////////////////////////
