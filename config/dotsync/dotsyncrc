@@ -28,5 +28,6 @@ ngenetzky-beast git=ANY
 ngenetzky-skull git=ANY
 ngenetzky-yoga git=ANY
 ngenetzky-ultra git=ANY
+yoga git=ANY
 [endhosts]
 
