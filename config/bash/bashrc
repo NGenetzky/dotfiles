@@ -113,11 +113,21 @@ if [ -d "${HOME}/.task/" ] ; then
     }
 fi
 
+echo_stderr(){ >&2 echo $@; }
+
 activate_bashit
 activate_dircolors
 activate_fzf
 activate_nvm
 activate_virtualenvwrapper
 
+# alias
+alias df='df -h -x squashfs -x tmpfs -x devtmpfs'
+
 unset activate_bashit activate_dircolors activate_fzf activate_nvm activate_virtualenvwrapper
 
+# python3-gitlab
+eval "$(register-python-argcomplete gitlab)"
+
+# Hook for desk activation
+[ -n "$DESK_ENV" ] && source "$DESK_ENV" || true
