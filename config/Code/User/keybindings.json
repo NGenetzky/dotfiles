@@ -48,4 +48,40 @@
     // ngenetzky.vim
     //
     ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    // vscode issue
+    //
+    // https://github.com/microsoft/vscode/issues/39532
+    {
+        "key": "shift+alt+cmd+down",
+        "command": "cursorColumnSelectDown",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+cmd+left",
+        "command": "cursorColumnSelectLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+cmd+pagedown",
+        "command": "cursorColumnSelectPageDown",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+cmd+pageup",
+        "command": "cursorColumnSelectPageUp",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+cmd+right",
+        "command": "cursorColumnSelectRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+cmd+up",
+        "command": "cursorColumnSelectUp",
+        "when": "editorTextFocus"
+    },
+    // vscode issue
+    ////////////////////////////////////////////////////////////////////////////
 ]
