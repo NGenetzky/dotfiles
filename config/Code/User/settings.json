@@ -1,6 +1,6 @@
 {
     "files.insertFinalNewline": true,
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 0,
     // "workbench.colorTheme": "Braver's Solarized Dark (themed workbench)",
     // "workbench.colorTheme": "Solarized Dark",
     ////////////////////////////////////////////////////////////////////////////
@@ -91,6 +91,9 @@
         "<C-k>": false,
         // "<C-r>": false, // I like redo.
     },
+    //
+    // vscodevim.vim
+    ////////////////////////////////////////////////////////////////////////////
     "[c]": {
         "editor.defaultFormatter": "xaver.clang-format"
     },
@@ -99,10 +102,9 @@
     },
     "editor.renderWhitespace": "all",
     "yaml.schemas": {
-        "file:///home/nateg/.vscode/extensions/atlassian.atlascode-2.3.2/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///home/nateg/.vscode/extensions/atlassian.atlascode-2.8.0/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "projectManager.projectsLocation": "~/.config/vscode_projects.json",
-    "terminal.integrated.fontSize": 16,
     "terminal.integrated.lineHeight": 1.2,
     "atlascode.jira.jqlList": [
         {
@@ -128,7 +130,52 @@
         "**/build/tmp": true
     },
     "window.restoreWindows": "none",
-    //
-    // vscodevim.vim
-    ////////////////////////////////////////////////////////////////////////////
+    "atlascode.jira.lastCreateSiteAndProject": {
+        "siteId": "6c23a7dd-e70f-4d94-b89e-36aafbf3ba3d",
+        "projectKey": "AP"
+    },
+    "search.exclude": {
+        "mnt": true
+    },
+    "editor.multiCursorModifier": "alt",
+    "search.followSymlinks": false,
+    "gitlens.heatmap.ageThreshold": "7",
+    "update.showReleaseNotes": false,
+    "python.showStartPage": false,
+    "window.openWithoutArgumentsInNewWindow": "off",
+    "terminal.integrated.rendererType": "experimentalWebgl",
+    "editor.minimap.size": "fill",
+    "terminal.explorerKind": "external",
+    "python.formatting.provider": "black",
+    "C_Cpp.loggingLevel": "Information",
+    "python.logging.level": "warn",
+    "editor.tabSize": 2,
+    "workbench.editor.highlightModifiedTabs": true,
+    "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": false,
+        "gitlens.codeLens.scopes": [
+            "document"
+        ],
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        }
+    },
+    "[ini]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.detectIndentation": false,
+    },
+    "[conf]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.detectIndentation": false,
+    },
+    "files.associations": {
+        "*.conf": "ini",
+        "*lircd..conf": "ini",
+    }
 }
