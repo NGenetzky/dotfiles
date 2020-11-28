@@ -4,7 +4,7 @@
 # alias gkf="git !exec gitk --all --first-parent &"
 # alias gg="git !exec git gui &"
 
-# alias gco='git checkout'
+alias gco='git checkout'
 # alias gsw='git checkout'
 # alias gnb='git checkout -b'
 # alias grevert='git checkout --'
@@ -22,11 +22,11 @@
 # alias gd='git diff'
 
 # alias gst='git status'
-# alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
+alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 # alias gsts='git status -s'
 # alias gstsi='git status -s --ignored'
 
-# alias gb='git branch'
+alias gb='git branch'
 # alias gbr='git branch'
 
 # alias gmrg='git merge --no-ff --edit'
