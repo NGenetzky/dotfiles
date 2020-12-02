@@ -1,5 +1,7 @@
+#!/bin/false
+# source this file
 
-bashit enable alias \
+bash-it enable alias \
   ansible apt clipboard curl docker docker-compose  git gitsvn tmux \
   todo.txt-cli vim
 bash-it enable completion \
