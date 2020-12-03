@@ -1,0 +1,84 @@
+---
+
+# yamllint disable rule:line-length
+
+- defaults:
+    link:
+      relative: true
+      canonicalize-path: false
+      relink: true
+
+- shell:
+    - 'mkdir -p ~/bin ~/.local/bin'
+    # - 'mkdir -p ~/.config/byobu ~/.local/share/zsh ~/.local/usr'
+    # - 'mkdir -p ~/.gnupg && chmod 0700 ~/.gnupg'
+    # - 'mkdir -p ~/.ssh/multiplex && chmod 0700 ~/.ssh'
+    # - 'cd ~/.ssh && for dir in ./*; do if [ -d "$dir" ] && [ "$dir" != "./multiplex" ]; then mkdir -p "$dir/known_hosts.d"; fi ; done'
+
+- link:
+
+    ~/.bashrc:
+      force: true
+      path: config/bash/bashrc
+
+    ~/.bash_logout:
+      force: true
+      path: config/bash/bash_logout
+
+    ~/.bash_profile:
+      path: config/bash/profile
+
+    # ~/.ssh/config_ypid_defaults:
+    #   create: true
+    #   relink: true
+    #   path: ssh/config_ypid_defaults
+
+    # ~/.config/git/config:
+    #   create: true
+    #   relink: true
+    #   path: config/git/gitconfig
+
+    # ~/.config/git/ignore:
+    #   create: true
+    #   relink: true
+    #   path: gitignore_global
+
+    # ~/.vim:
+    #   create: true
+    #   relink: true
+    #   path: nvim
+
+    # ~/.config/nvim:
+    #   create: true
+    #   relink: true
+    #   path: nvim
+
+    # ~/.vimrc:
+    #   create: true
+    #   relink: true
+    #   path: nvim/init.vim
+
+    # ~/.tmux.conf:
+    #   create: true
+    #   relink: true
+    #   path: tmux.conf
+
+    # ~/.local/share/tmux:
+    #   create: true
+    #   relink: true
+    #   path: tmux
+
+# - shell:
+#     - 'rsync --recursive --ignore-existing config/ ~/.config'
+#     - 'rsync --recursive --ignore-existing local/ ~/.local'
+#     - 'rsync --ignore-existing ssh/config ~/.ssh'
+#     - 'rm -f ~/.config/shell.d/shell_extend_PATH ~/.config/shell.d/public'
+#     - 'rm -f ~/.asdf'
+#     # Needs to be run with X11 $DISPLAY set:
+#     - 'if command -v dconf && [ ! -e ~/.config/dconf/user ]; then make --directory ~/.config/dconf restore || true; fi'
+#     - 'if [ ! -e "$HOME/.mrconfig" ]; then cp myrepos/mrconfig_home_template "$HOME/.mrconfig"; fi'
+
+# - clean:
+#     - '~'
+#     - '~/.config/git'
+#     - '~/.config/shell.d'
