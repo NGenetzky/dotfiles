@@ -135,7 +135,8 @@
         "projectKey": "AP"
     },
     "search.exclude": {
-        "mnt": true
+        "mnt": true,
+        "mnt/**": true
     },
     "editor.multiCursorModifier": "alt",
     "search.followSymlinks": false,
@@ -177,5 +178,12 @@
     "files.associations": {
         "*.conf": "ini",
         "*lircd..conf": "ini",
-    }
+        "*.scr": "shellscript"
+    },
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ]
 }
