@@ -82,6 +82,19 @@
         "command": "cursorColumnSelectUp",
         "when": "editorTextFocus"
     },
+    // {
+    //     "key": "] q",
+    //     // "command": "workbench.action.editor.nextChange",
+    //     "command": "workbench.action.compareEditor.nextChange",
+    //     "when": "editorTextFocus"
+    // },
+    // {
+    //     "key": "[ q",
+    //     // "command": "editor.action.editor.previousChange",
+    //     "command": "workbench.action.compareEditor.previousChange",
+    //     "when": "editorTextFocus"
+    // },
+    //
     // vscode issue
     ////////////////////////////////////////////////////////////////////////////
 ]
