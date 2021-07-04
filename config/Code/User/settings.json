@@ -1,7 +1,7 @@
 {
     "editor.minimap.enabled": false,
     "files.insertFinalNewline": true,
-    "window.zoomLevel": 3,
+    "window.zoomLevel": 1,
     // "workbench.colorTheme": "Braver's Solarized Dark (themed workbench)",
     // "workbench.colorTheme": "Solarized Dark",
     ////////////////////////////////////////////////////////////////////////////
@@ -100,6 +100,8 @@
     },
     "editor.renderWhitespace": "all",
     "workbench.iconTheme": "material-icon-theme",
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "search.followSymlinks": false,
     //
     // vscodevim.vim
     ////////////////////////////////////////////////////////////////////////////
