@@ -4,26 +4,27 @@ config:
   create: true
   dotpath: files
   keepdot: false
-  link_by_default: true
   longkey: false
   showdiff: false
   workdir: ~/.config/dotdrop/
+  link_on_import: link
+  minversion: 1.6.0
 dotfiles:
   f_bash_logout:
     dst: ~/.bash_logout
-    link: true
+    link: link
     src: bash_logout
   f_bash_profile:
     dst: ~/.bash_profile
-    link: true
+    link: link
     src: bash_profile
   f_bashrc:
     dst: ~/.bashrc
-    link: true
+    link: link
     src: bashrc
   f_dircolors:
     dst: ~/.dircolors
-    link: true
+    link: link
     src: dircolors
 profiles:
   ngenetzky-skull:
