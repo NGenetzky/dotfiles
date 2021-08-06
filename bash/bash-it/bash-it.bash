@@ -21,7 +21,7 @@ do_install() {
 
     ln -fTs \
         "${BASEDIR}/custom" \
-        "${SRCDIR}/custom/custom"
+        "${SRCDIR}/custom"
 
     bash -l "${GITROOT}/config/bashit/bashit-config.sh"
 }

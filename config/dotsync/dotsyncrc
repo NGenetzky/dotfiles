@@ -19,6 +19,7 @@ config/Code/User/settings.json:.config/Code/User/settings.json
 config/Code/User/snippets:.config/Code/User/snippets
 config/tmux/tmux.conf:.tmux.conf
 config/tmux/plugins.tmux.conf:.tmux/plugins.tmux.conf
+config/editor-vim/vimrc:.vimrc
 [endfiles]
 
 # Hosts to sync
@@ -31,5 +32,6 @@ ngenetzky-yoga git=ANY
 ngenetzky-ultra git=ANY
 virt-xilinx-beaver git=ANY
 yoga git=ANY
+skull git=ANY
 [endhosts]
 

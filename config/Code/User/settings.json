@@ -1,7 +1,7 @@
 {
     "editor.minimap.enabled": false,
     "files.insertFinalNewline": true,
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 3,
     // "workbench.colorTheme": "Braver's Solarized Dark (themed workbench)",
     // "workbench.colorTheme": "Solarized Dark",
     ////////////////////////////////////////////////////////////////////////////
