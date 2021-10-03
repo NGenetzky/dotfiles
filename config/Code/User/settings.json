@@ -100,6 +100,10 @@
     },
     "editor.renderWhitespace": "all",
     "workbench.iconTheme": "material-icon-theme",
+    "yaml.customTags": [
+        "!encrypted/pkcs1-oaep scalar",
+        "!vault scalar"
+    ],
     //
     // vscodevim.vim
     ////////////////////////////////////////////////////////////////////////////
